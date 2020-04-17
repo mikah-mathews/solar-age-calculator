@@ -6,6 +6,7 @@
   "extends": "eslint:recommended",
   "env": {
     "es6": true,
+    "node": true,
     "browser": true,
     "jquery": true
   },
@@ -13,6 +14,7 @@
     "semi": 1,
     "indent": ["warn", 2],
     "no-console": "warn",
-    "no-debugger": "warn"
+    "no-debugger": "warn",
+    "no-unused-vars": "warn"
   }
  }
