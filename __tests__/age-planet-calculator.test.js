@@ -10,10 +10,10 @@ describe ('Calculator', function() {
     expect(mikahAge.year).toEqual(2000);
   });
   test('Get how many Earth Days Old the User is', () => {
-    var mikahAge = new UserAge(5, 7, 2000);
-    var mikahDate = mikahAge.EdO();
-    var mikahDaysOld = mikahDate 
-    expect(mikahDaysOld).toEqual(7285)
+    var mikahDate = new UserAge(5, 7, 2000);
+    var mikahDaysOld = mikahDate.EdO();
+    expect(mikahDaysOld).toEqual(0);
+    // expect wrong answer
   });
 
 });
