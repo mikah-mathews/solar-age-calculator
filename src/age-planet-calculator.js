@@ -6,27 +6,20 @@ export function UserAge(month, day, year) {
 };
 
 UserAge.prototype.EdO = function(month, day, year) {
-  let makeBdayDate = moment(new Date(year, month - 1, day));
-  let tester = moment({y: year, M: month, d: day});
-  moment().format("dddd, MMMM Do YYYY");
-  console.log(tester);
-  // makeBdayDate.year(year);
-  // makeBdayDate.month(month - 1);
-  // makeBdayDate.day(day);
-  // let bDayYear = makeBdayDate.setFullYear(year);
-  // let bDayMonth = makeBdayDate.setMonth(month - 1);
-  // let bDayday = makeBdayDate.setDate(day);
-  // console.log(makeBdayDate);
-  // let makeCurrentDate = new Date();
-  // let curYear = makeCurrentDate.getFullYear();
-  // let curMonth = makeCurrentDate.getMonth();
-  // let curDay = makeCurrentDate.getDate();
-  // console.log(makeCurrentDate);
-  // let bdayDate = moment([makeBdayDate]);
-  // // console.log(bdayDate);
-  // let currentDate = moment([makeCurrentDate]);
-  // //console.log(currentDate);
-  console.log(bdayDate.diff(currentDate, 'days'));
+  let makeBdayDate = moment(); // sets new date
+  let bYear = year // gets birth year
+  let bMonth = month - 1; // gets birth month
+  let bDay = day; // gets birthday
+  makeBdayDate.year(bYear); // sets bday year
+  makeBdayDate.month(bMonth); // sets bday month
+  makeBdayDate.day(bDay); // sets bday
+  console.log(makeBdayDate.format("dddd, MMMM Do YYYY")); // console logs it all nice
+  let makeCurrentDate = moment(); // sets a new date
+  makeCurrentDate.weekday(); // sets current day
+  makeCurrentDate.month(); // sets current month
+  makeCurrentDate.year(); // sets current year
+  console.log(makeCurrentDate.format("dddd, MMMM Do YYYY")); // currentDate is working
+  console.log(makeCurrentDate.diff(makeBdayDate, 'days')); // counts how many days it has been since birth
 }
 
 export function Planets(mercury, venus, mars, jupiter) {
