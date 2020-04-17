@@ -50,7 +50,7 @@ Spec: if userAge > userLifeExpectancy, return how many years they have lived pas
 
 ## Known Bugs
 
-No known bugs at this time.
+The exact number of days old you are will be off a bit due to the logic not dealing with leap years.
 
 ## Support and contact details
 
