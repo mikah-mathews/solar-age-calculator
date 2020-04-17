@@ -6,18 +6,27 @@ export function UserAge(month, day, year) {
 };
 
 UserAge.prototype.EdO = function(month, day, year) {
-  var makeBdayDate = new Date();
-  makeBdayDate.setFullYear(year);
-  makeBdayDate.setMonth(month);
-  makeBdayDate.setDate(day);
-  console.log(makeBdayDate);
-  var makeCurrentDate = new Date();
-  makeCurrentDate.setFullYear();
-  makeCurrentDate.setMonth();
-  makeCurrentDate.setDate();
-  var bdayDate = moment([makeBdayDate]);
-  var currentDate = moment([makeCurrentDate]);
-  return bdayDate.diff(currentDate, 'days');
+  let makeBdayDate = moment(new Date(year, month - 1, day));
+  let tester = moment({y: year, M: month, d: day});
+  moment().format("dddd, MMMM Do YYYY");
+  console.log(tester);
+  // makeBdayDate.year(year);
+  // makeBdayDate.month(month - 1);
+  // makeBdayDate.day(day);
+  // let bDayYear = makeBdayDate.setFullYear(year);
+  // let bDayMonth = makeBdayDate.setMonth(month - 1);
+  // let bDayday = makeBdayDate.setDate(day);
+  // console.log(makeBdayDate);
+  // let makeCurrentDate = new Date();
+  // let curYear = makeCurrentDate.getFullYear();
+  // let curMonth = makeCurrentDate.getMonth();
+  // let curDay = makeCurrentDate.getDate();
+  // console.log(makeCurrentDate);
+  // let bdayDate = moment([makeBdayDate]);
+  // // console.log(bdayDate);
+  // let currentDate = moment([makeCurrentDate]);
+  // //console.log(currentDate);
+  console.log(bdayDate.diff(currentDate, 'days'));
 }
 
 export function Planets(mercury, venus, mars, jupiter) {
