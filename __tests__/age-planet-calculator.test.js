@@ -1,4 +1,5 @@
 import { UserAge } from './../src/age-planet-calculator.js';
+import { roundToTwo } from './../src/age-planet-calculator.js';
 import { Planets } from './../src/age-planet-calculator.js';
 
 describe ('Calculator', function() {
@@ -17,11 +18,14 @@ describe ('Calculator', function() {
     expect(mikahDaysOld).toEqual(7283);
     expect(veronicaDaysOld).toEqual(15416);
   });
-  // test('Return age in Mercury Years', () => {
-  //   let mikahDate = new UserAge(5, 7, 2000);
-  //   let mikahDaysOld = mikahDate.EdO();
-  //   expect()
-  // });
+  test('Return age in Mercury Years', () => {
+    let mikahDate = new UserAge(5, 7, 2000);
+    let mikahDaysOld = mikahDate.EdO(5, 7, 2000);
+    console.log(mikahDaysOld);
+    let yearsOnMercury = (mikahDaysOld / 88);
+    let mikahMercuryYears = roundToTwo(yearsOnMercury);
+    expect(mikahMercuryYears).toEqual(82.76)
+  });
   // test('return age in venus years', () => {
   //   let mikahDate = new UserAge(5, 7, 2000);
   //   let mikahDaysOld = mikahDate.EdO();
