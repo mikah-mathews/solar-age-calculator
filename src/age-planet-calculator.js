@@ -5,6 +5,9 @@ export function UserAge(month, day, year) {
   this.year = year;
 };
 
+export function roundToTwo(num) {    
+  return +(Math.round(num + "e+2")  + "e-2");
+}
 UserAge.prototype.EdO = function(month, day, year) {
   let makeBdayDate = moment(); // sets new date
   let bYear = year // gets birth year
