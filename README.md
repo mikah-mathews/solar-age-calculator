@@ -26,25 +26,27 @@ Spec: returns userAge in Mercury Years (equivilent to 0.24 Earth years or 88 Ear
   > Output: 7285(earthdays) / 88(1 mercury year in earth days) = 82.7 (years old in Mercury Years)
 Spec: returns userAge in Venus Years (equivilent to 0.62 Earth years or 225 Earth Days)
 * Input: 7285
-  > Output:
+  > Output: 7285(earthdays) / 225(1 venus year in earth days) = 32.4 (years old in Venus Years)
 Spec: returns userAge in Mars Years (equivilent to 1.88 Earth years or 687 Earth Days)
-* Input:
-  > Output:
+* Input: 7285
+  > Output: 7285(earthdays) / 687(1 Mars year in earth days) = 10.6 (years old in Mars Years)
 Spec: returns userAge in Jupiter Years (equivilent to 11.86 Earth years or 4,307 Earth Days)
-* Input:
-  > Output:
+* Input: 7285
+  > Output: 7285(earthdays) / 4,307(1 Jupiter year in earth days) = 1.7 (years old in Jupiter Years)
 Spec: calculate userLifeExpectancy by sex
-* Input:
-  > Output:
-Spec: calculate how many Planetary Years user has left
-* Input:
-  > Output:
+* If Input: Male
+  > Output: userLifeExpectancy = 76 earth years or 27,740 earth days
+* If Input: Female
+  > Output: userLifeExpectancy = 81 earth years or 29,565 earth days
+Spec: calculate how many Planetary Years userLife expectancy is
+* Input: (27,740(male life expectancy) / 4,307(Jupiter year))
+  > Output: 6.4 Jupiter Years
 Spec: if userAge < userLifeExpectancy, return how many years they have left
-* Input:
-  > Output:
+* Input: userAge = 1.7 Jupiter Years && userLifeExpectancy = 6.4 Jupiter Years
+  > Output: 6.4 - 1.7 = 4.7
 Spec: if userAge > userLifeExpectancy, return how many years they have lived past the average life expectancy
-* Input:
-  > Output:
+* Input: userAge = 7 Jupiter Years && userLifeExpectancy = 6.4 Jupiter Years
+  > Output: 7 - 6.4 = 0.6
 
 ## Known Bugs
 
